@@ -1,15 +1,13 @@
-const express = require('express');
-const { Router } = express;
+const { Router } = require('express');
 const route = new Router();
+const { getSession } = require('../controllers/session.controllers');
 const passport = require('passport');
 
 // PASAR LOS DATOS DEL JWT AL FRONT
 route.get(
   '/current',
   passport.authenticate('jwt', { session: false }),
-  (req, res) => {
-    res.send(req.user);
-  }
+  getSession
 );
 
 module.exports = route;

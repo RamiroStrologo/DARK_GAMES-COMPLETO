@@ -101,13 +101,13 @@ function loadIndex() {
   </div>`);
   const aPS4 = document.querySelector('#aTiendaPS4');
   aPS4.addEventListener('click', function () {
-    cargarTienda();
+    loadTienda();
     identificarConsola('btnPS4');
   });
 
   const aXONE = document.querySelector('#aTiendaXONE');
   aXONE.addEventListener('click', function () {
-    cargarTienda();
+    loadTienda();
     identificarConsola('btnXONE');
   });
 }
@@ -168,7 +168,7 @@ async function loadDetails(game, consolaInfo) {
   videoCont.innerHTML = iframe;
 
   lnkVolver.addEventListener('click', () => {
-    cargarTienda();
+    loadTienda();
     identificarConsola(consolaInfo[0].consola);
   });
 }
@@ -185,9 +185,18 @@ function loadLogup() {
         <h1>REGISTRARSE</h1>
         <!-- //FORM CONTIENE LOS CONTROLES -->
         <form action="" class="col-12 mt-4">
+        <div class="mb-3">
+            <label for="email_usuario" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email_usuario"
+              placeholder="name@example.com"
+            />
+          </div>
           <div class="mb-3">
             <label for="nombre_usuario_log" class="form-label"
-              >Nombre de usuario:</label
+              >Nombre:</label
             >
             <input
               type="text"
@@ -196,6 +205,19 @@ function loadLogup() {
               placeholder="Nombre de usuario"
             />
           </div>
+         
+          <div class="mb-3">
+          <label for="apellido_usuario_log" class="form-label"
+            >Apellido:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="apellido_usuario_log"
+            placeholder="Apellido de usuario"
+          />
+        </div>
+         
           <div class="mb-3">
             <label for="contrasenia_usuario_log" class="form-label"
               >Crear contraseña:</label
@@ -218,15 +240,7 @@ function loadLogup() {
               placeholder="Repetir contraseña"
             />
           </div>
-          <div class="mb-3">
-            <label for="email_usuario" class="form-label">Email:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email_usuario"
-              placeholder="name@example.com"
-            />
-          </div>
+          
           <div class="d-flex flex-column mb-3">
             <button type="button" id="btnLogup" class="button_form">Registrarse</button>
             <a  id="swapLogIn" class="ms-5"
@@ -238,32 +252,39 @@ function loadLogup() {
     </div>
   </div>`);
   const btnLogup = document.querySelector('#btnLogup');
-  btnLogup.addEventListener('click', function () {
-    const txtUser = document.querySelector('#nombre_usuario_log').value;
+  btnLogup.addEventListener('click', async function () {
+    const txtName = document.querySelector('#nombre_usuario_log').value;
+    const txtLastName = document.querySelector('#apellido_usuario_log').value;
+    const txtEmail = document.querySelector('#email_usuario').value;
     const txtPass = document.querySelector('#contrasenia_usuario_log').value;
     const txtPassRep = document.querySelector(
       '#contrasenia_usuario_rep_log'
     ).value;
-    if (txtPass != '' && txtUser != '') {
+    if (
+      txtName != '' &&
+      txtLastName != '' &&
+      txtEmail != '' &&
+      txtPass != '' &&
+      txtPassRep != ''
+    ) {
       if (txtPass == txtPassRep) {
-        logUp(txtUser, txtPass);
-        txtUser.value = '';
-        txtPass.value = '';
-        txtPassRep.value = '';
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Las contraseñas deben coincidir!',
-        });
+        const data = {
+          name: txtName,
+          lastname: txtLastName,
+          email: txtEmail,
+          password: txtPass,
+        };
+        const response = await logUp(data);
+        response && loadLogin();
       }
     }
   });
   const swapLogIn = document.querySelector('#swapLogIn');
   swapLogIn.addEventListener('click', function () {
-    cargarLogin();
+    loadLogin();
   });
 }
+
 function loadLogin() {
   cambiarPage(`<div class="row h-100">
     <div class="d-flex justify-content-center align-items-center">
@@ -284,7 +305,7 @@ function loadLogin() {
         <form action="" class="col-12 mt-4">
           <div class="mb-3">
             <label for="nombre_usuario_ini" class="form-label"
-              >Usuario:</label
+              >Email:</label
             >
             <input
               type="text"
@@ -313,14 +334,17 @@ function loadLogin() {
     </div>
   </div>`);
   const btnLogin = document.querySelector('#btnLogin');
-  btnLogin.addEventListener('click', function () {
-    const txtName = document.querySelector('#nombre_usuario_ini').value;
+  btnLogin.addEventListener('click', async function () {
+    const txtEmail = document.querySelector('#nombre_usuario_ini').value;
     const txtPass = document.querySelector('#contrasenia_usuario_ini').value;
-    logIn(txtName, txtPass);
+    const data = { email: txtEmail, password: txtPass };
+    const response = await logIn(data);
+    console.log(response);
+    saveJwt(response);
   });
   const swapLogUp = document.querySelector('#swapLogUp');
   swapLogUp.addEventListener('click', function () {
-    cargarLogup();
+    loadLogup();
   });
 }
 function loadAboutUs() {

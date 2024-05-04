@@ -1,5 +1,6 @@
 window.onload = async () => {
-  await fetch('http://localhost:8080/api/session/current');
+  const jwtExist = checkJwtExist();
+  if (!jwtExist) loadLogin();
 };
 
 function showGames(arrayGames, consolaInfo) {
@@ -130,11 +131,11 @@ aXONE.addEventListener('click', function () {
 //EVENTOS DEL HEADER Y FOOTER
 const aIndex = document.querySelector('#aIndex');
 aIndex.addEventListener('click', function () {
-  loadIndex();
+  authPages(loadIndex);
 });
 const aTienda = document.querySelector('#aTienda');
 aTienda.addEventListener('click', function () {
-  loadTienda();
+  authPages(loadTienda);
   identificarConsola('btnPS4');
 });
 const aLogin = document.querySelector('#aLogin');
@@ -152,49 +153,7 @@ aAboutUs.forEach((el) => {
   });
 });
 
-//FUNCION QUE COMPRUEBA LA EXISTENCIA DEL USUARIO
-function logIn(nombre, password) {
-  const userNombre = localStorage.getItem('userNombre');
-  const userPassword = localStorage.getItem('userPassword');
-  if (userNombre != '' && userPassword != '') {
-    if (nombre == userNombre && password == userPassword) {
-      document.querySelector('#nombre_usuario_ini').value = '';
-      document.querySelector('#contrasenia_usuario_ini').value = '';
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: '¡Bienvenido!',
-        timer: 1500,
-      });
-    } else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Usuario y/o contraseña incorrectos',
-      });
-    }
-  }
-}
-//FUNCION QUE REGISTRA AL USUARIO
-function logUp(nombre, password) {
-  const chekName = localStorage.getItem('userNombre');
-  if (chekName != nombre) {
-    localStorage.setItem('userNombre', nombre);
-    localStorage.setItem('userPassword', password);
-    document.querySelector('#nombre_usuario_log').value = '';
-    document.querySelector('#contrasenia_usuario_log').value = '';
-    document.querySelector('#contrasenia_usuario_rep_log').value = '';
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Usuario registrado ¡Bienvenido!',
-      timer: 1500,
-    });
-  } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'El nombre de usuario ya esta en uso',
-    });
-  }
+function authPages(pageToLoad) {
+  const jwt = checkJwtExist();
+  !jwt ? loadLogin() : pageToLoad();
 }
