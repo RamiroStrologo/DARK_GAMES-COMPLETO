@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const uuid = require('uuid4');
+const uuid4 = require('uuid4');
 
 const createHash = (password) => {
   let pass = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
@@ -10,7 +10,7 @@ const isValid = (passwordEntered, passwordDb) => {
   return decrypt;
 };
 const createCode = (num) => {
-  const uuid = uuid();
+  const uuid = uuid4();
   const randomCode = uuid.slice(0, num);
   return randomCode;
 };
