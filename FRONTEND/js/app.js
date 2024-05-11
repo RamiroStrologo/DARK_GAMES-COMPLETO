@@ -1,6 +1,10 @@
 window.onload = async () => {
   const jwtExist = checkJwtExist();
   if (!jwtExist) loadLogin();
+  else {
+    authJwt(jwtExist);
+    loadTienda();
+  }
 };
 
 //FUNCION QUE CAMBIA EL CONTENIDO MAIN DEL HTML(SPA)

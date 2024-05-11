@@ -11,3 +11,5 @@ route.post(
 
 route.post('/login', passport.authenticate('login', { session: false }), login);
 module.exports = route;
+
+route.get('/token', passport.authenticate('jwt', { session: false }));

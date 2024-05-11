@@ -1,16 +1,15 @@
 function loadTienda() {
   getGames();
   cambiarPage(htmlTienda);
-
-  async function getGames(filters = {}) {
+  async function getGames(filters = null) {
+    const filtersToAdd = { ...filters };
     const response = await fetch(
-      `http://localhost:8080/api/products?filters=${filters}`
+      `http://localhost:8080/api/products?plataform=${filtersToAdd.plataform}`
     );
     if (!response.ok) {
       return false;
     }
     const data = await response.json();
-    console.log('En getGames: ', data.data.docs);
     showGames(data);
   }
   function showGames(arrayGames) {
@@ -63,9 +62,9 @@ function loadTienda() {
       const game = arrayGames.data.docs[key];
       imgGame.classList.add('img_portadas');
       imgGame.src = game.thumbnails;
-      imgGame.alt = game.titulo;
-      parrafo.innerHTML = `Género: ${game.genero} <br />
-      Precio: ${game.precio} <br />`;
+      imgGame.alt = game.title;
+      parrafo.innerHTML = `Género: ${game.genre} <br />
+      Precio: ${game.price} <br />`;
       //EMPARENTA LOS ELEMENTOS
       divGame.appendChild(imgGame);
       divGame.appendChild(parrafo);
@@ -74,7 +73,7 @@ function loadTienda() {
     }
     gamesContainer.appendChild(childGamesContainer);
   }
-  function asignarEventClickDetalles(divGame, game, consolaInfo) {
+  function asignarEventClickDetalles(divGame, game) {
     const gameData = game;
     divGame.addEventListener('click', function () {
       loadDetails(gameData);
@@ -94,8 +93,13 @@ function loadTienda() {
   btnXONE.addEventListener('click', function () {
     getGames({ plataform: 'xone' });
   });
+
+  const btnAll = document.querySelector('#button_tienda_hamburger');
+  btnAll.addEventListener('click', function () {
+    getGames();
+  });
 }
-async function loadDetails(game, consolaInfo) {
+async function loadDetails(game) {
   cambiarPage(htmlDetails);
   const imgCont = document.querySelector('#imgCont');
   const img = document.createElement('img');
@@ -107,17 +111,17 @@ async function loadDetails(game, consolaInfo) {
   const videoCont = document.querySelector('#videoCont');
   const lnkVolver = document.querySelector('#backCont');
   imgCont.appendChild(img);
-  img.src = game.imagenSrc;
+  img.src = game.thumbnails;
   datCont.appendChild(parrafo);
-  parrafo.innerHTML = `Género: ${game.genero} <br> Precio: ${game.precio}`;
+  parrafo.innerHTML = `Género: ${game.genre} <br> Precio: ${game.price}`;
   descCont.appendChild(tituloH);
   descCont.appendChild(descP);
-  tituloH.innerText = game.titulo.toUpperCase();
-  descP.innerText = `${game.descripcion}`;
+  tituloH.innerText = game.title.toUpperCase();
+  descP.innerText = `${game.desc}`;
   //Funcion flecha que consume la API de youtube para obtener el iframe del video
   const getIframe = async () => {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=player&id=${game.id}&key=AIzaSyA0v1rVjAALrB20vp1hY5MO7ohx395tcuY`
+      `https://www.googleapis.com/youtube/v3/videos?part=player&id=${game.ytId}&key=AIzaSyA0v1rVjAALrB20vp1hY5MO7ohx395tcuY`
     );
     const result = await response.json();
     let iframeHtml = result.items[0].player.embedHtml;
@@ -130,7 +134,6 @@ async function loadDetails(game, consolaInfo) {
 
   lnkVolver.addEventListener('click', () => {
     loadTienda();
-    identificarConsola(consolaInfo[0].consola);
   });
 }
 function loadLogup() {
@@ -159,6 +162,7 @@ function loadLogup() {
           password: txtPass,
         };
         const response = await logUp(data);
+        console.log(response);
         response && loadLogin();
       }
     }
@@ -177,7 +181,6 @@ function loadLogin() {
     const txtPass = document.querySelector('#contrasenia_usuario_ini').value;
     const data = { email: txtEmail, password: txtPass };
     const response = await logIn(data);
-    console.log(response);
     saveJwt(response);
   });
   const swapLogUp = document.querySelector('#swapLogUp');

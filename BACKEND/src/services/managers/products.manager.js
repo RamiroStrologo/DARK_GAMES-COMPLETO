@@ -2,10 +2,13 @@ const Products = require('../../models/product.model');
 const { createCode } = require('../../utils/crypts.utils');
 
 class ProductManager {
-  async getProducts(filter) {
+  async getProducts(plataform) {
     try {
       let response = await Products.paginate(
-        filter.plataform ? { plataform: filter.plataform } : {}
+        plataform.plataform != 'undefined'
+          ? { plataform: plataform.plataform }
+          : {},
+        { limit: 36 }
       );
       return response;
     } catch (err) {

@@ -22,7 +22,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/carts', cartRoutes);
 app.use('/api/products', productRoutes);
 
-app.listen(envVars.port, (req, res) => {
+app.listen(envVars.port, () => {
   console.log(`server run OK on port ${envVars.port}`);
   DataBase.connect();
 });

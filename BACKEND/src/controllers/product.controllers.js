@@ -3,8 +3,8 @@ const pm = new ProductManager();
 
 const getProducts = async (req, res) => {
   try {
-    const { filters } = req.query;
-    const response = await pm.getProducts(filters);
+    const plataform = req.query;
+    const response = await pm.getProducts(plataform);
     response
       ? res.status(200).send({ msg: 'Productos obtenidos', data: response })
       : res.status(404).send({

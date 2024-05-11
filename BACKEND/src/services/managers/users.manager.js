@@ -34,6 +34,7 @@ class UserManager {
   async loginUser(userData) {
     try {
       const userFound = await this.findUser(userData.email);
+
       if (userFound) {
         const validPassword = isValid(userData.password, userFound.password);
         if (validPassword) {

@@ -24,10 +24,12 @@ const ProductSchema = new mongoose.Schema({
   genre: {
     type: String,
     required: true,
-    required: true,
   },
   thumbnails: { type: String, required: true },
   plataform: { type: String, enum: ['ps3', 'ps4', 'xone'] },
+  ytId: {
+    type: String,
+  },
 });
 ProductSchema.plugin(mongoPaginate);
 const Product = mongoose.model('products', ProductSchema);

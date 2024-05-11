@@ -1,7 +1,7 @@
 [
   {
     "code": "8a3Aga7JJgE",
-    "thumbnails": "/public/img/ps3/games/the-last-of-us-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/the-last-of-us-ps3.webp",
     "title": "The Last of Us",
     "genre": "Acción y aventura",
     "price": " 6000",
@@ -12,7 +12,7 @@
   },
   {
     "code": "QkkoHAzjnUs",
-    "thumbnails": "/public/img/ps3/games/gta-v-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/gta-v-ps3.webp",
     "title": "GTA V",
     "genre": "Mundo abierto, acción",
     "price": " 5500",
@@ -23,7 +23,7 @@
   },
   {
     "code": "JSRtYpNRoN0",
-    "thumbnails": "/public/img/ps3/games/the-elder-scrolls-v-skyrim-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/the-elder-scrolls-v-skyrim-ps3.webp",
     "title": "The Elder Scrolls V: Skyrim",
     "genre": "RPG de mundo abierto",
     "price": " 4500",
@@ -34,7 +34,7 @@
   },
   {
     "code": "-D_KcctdR0M",
-    "thumbnails": "/public/img/ps3/games/battlefield-4-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/battlefield-4-ps3.webp",
     "title": "Battlefield 4",
     "genre": "Shooter en primera persona",
     "price": " 4000",
@@ -45,15 +45,16 @@
   },
   {
     "code": "U6uyuIQYlfY",
-    "thumbnails": "/public/img/ps3/games/dark-souls-ii.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/dark-souls-ii.webp",
     "title": "Dark Souls II",
     "genre": "Acción y rol",
     "price": " 5000",
-    "desc": "Enfréntate a desafíos brutales y enemigos mortales en un mundo oscuro y misterioso en este juego de rol de acción. Dark Souls II pondrá a prueba tu habilcodead y paciencia mientras exploras su mundo implacable."
+    "desc": "Enfréntate a desafíos brutales y enemigos mortales en un mundo oscuro y misterioso en este juego de rol de acción. Dark Souls II pondrá a prueba tu habilcodead y paciencia mientras exploras su mundo implacable.",
+    "plataform": "ps3"
   },
   {
     "code": "ctQl9wa3ydE",
-    "thumbnails": "/public/img/ps3/games/dead-space-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/dead-space-ps3.webp",
     "title": "Dead Space",
     "genre": "Survival horror",
     "price": " 3500",
@@ -64,15 +65,16 @@
   },
   {
     "code": "EMCkbDnaTDM",
-    "thumbnails": "/public/img/ps3/games/metal-gear-rising-revengeance-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/metal-gear-rising-revengeance-ps3.webp",
     "title": "Metal Gear Rising: Revengeance",
     "genre": "Acción y hack and slash",
     "price": " 3000",
-    "desc": "Controla a Racodeen en este juego de acción frenético donde la espada es tu herramienta principal para enfrentarte a enemigos poderosos. Metal Gear Rising: Revengeance ofrece combates emocionantes y una historia envolvente."
+    "desc": "Controla a Racodeen en este juego de acción frenético donde la espada es tu herramienta principal para enfrentarte a enemigos poderosos. Metal Gear Rising: Revengeance ofrece combates emocionantes y una historia envolvente.",
+    "plataform": "ps3"
   },
   {
     "code": "ajxQ4dUvrqk",
-    "thumbnails": "/public/img/ps3/games/god-of-war-ascension-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/god-of-war-ascension-ps3.webp",
     "title": "God of War: Ascension",
     "genre": "Acción y aventura",
     "price": " 4200",
@@ -83,7 +85,7 @@
   },
   {
     "code": "czFv7F_3HUE",
-    "thumbnails": "/public/img/ps3/games/metal-gear-solcode-4-guns-of-the-patriots-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/metal-gear-solid-4-guns-of-the-patriots-ps3.webp",
     "title": "Metal Gear Solcode 4: Guns of the Patriots",
     "genre": "Acción y sigilo",
     "price": " 3800",
@@ -94,7 +96,7 @@
   },
   {
     "code": "D6ouHWP0KrY",
-    "thumbnails": "/public/img/ps3/games/need-for-speed-hot-pursuit-ps3.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/need-for-speed-hot-pursuit-ps3.webp",
     "title": "Need for Speed: Hot Pursuit",
     "genre": "Carreras y mundo abierto",
     "price": " 3000",
@@ -105,7 +107,7 @@
   },
   {
     "code": "kJDYCVV",
-    "thumbnails": "/public/img/ps3/games/far-cry-4-_1_.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/far-cry-4-_1_.webp",
     "title": "Far Cry 4",
     "genre": "Mundo abierto, disparos",
     "price": " 4200",
@@ -116,7 +118,7 @@
   },
   {
     "code": "93FHnpQ8uz0",
-    "thumbnails": "/public/img/ps3/games/silent-hill-downpour-_1_.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps3/games/silent-hill-downpour-_1_.webp",
     "title": "Silent Hill: Downpour",
     "genre": "Survival horror",
     "price": " 2800",
@@ -128,7 +130,7 @@
 
   {
     "code": "CCum266l1vY",
-    "thumbnails": "/public/imgps4/games/crash-bandicoot-4-its-about-time-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/imgps4/games/crash-bandicoot-4-its-about-time-ps4.webp",
     "title": "Crash Bandicoot 4: It's About Time",
     "genre": "Plataforma",
     "price": " 7000",
@@ -139,7 +141,7 @@
   },
   {
     "code": "jG2QDcqtLmE",
-    "thumbnails": "/public/img/ps4/games/cyberpunk-2077-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/cyberpunk-2077-ps4.webp",
     "title": "Cyberpunk 2077",
     "genre": "RPG de acción",
     "price": " 8000",
@@ -150,7 +152,7 @@
   },
   {
     "code": "TmZ5MTIu5hU",
-    "thumbnails": "/public/img/ps4/games/bloodborne-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/bloodborne-ps4.webp",
     "title": "Bloodborne",
     "genre": "Acción de rol",
     "price": " 8000",
@@ -161,7 +163,7 @@
   },
   {
     "code": "S6GTl_vPRvU",
-    "thumbnails": "/public/img/ps4/games/hogwarts-legacy-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/hogwarts-legacy-ps4.webp",
     "title": "Hogwarts Legacy",
     "genre": "RPG de mundo abierto",
     "price": " 8000",
@@ -172,7 +174,7 @@
   },
   {
     "code": "HCL2NwiRsAg",
-    "thumbnails": "/public/img/ps4/games/rescodeent-evil-village-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/rescodeent-evil-village-ps4.webp",
     "title": "Rescodeent Evil Village",
     "genre": "Survival horror",
     "price": " 8000",
@@ -183,7 +185,7 @@
   },
   {
     "code": "fLGa3SBxfCk",
-    "thumbnails": "/public/img/ps4/games/nioh-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/nioh-ps4.webp",
     "title": "Nioh",
     "genre": "Acción y rol",
     "price": " 5000",
@@ -194,18 +196,18 @@
   },
   {
     "code": "2nj9Ub32ILs",
-    "thumbnails": "/public/img/ps4/games/death-stranding-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/death-stranding-ps4.webp",
     "title": "Death Stranding",
     "genre": "Acción y exploración",
     "price": " 8000",
-    "desc": "Embárcate en un viaje surrealista a través de un mundo devastado, entregando suministros y reconectando a la humancodead en un entorno postapocalíptico. En Death Stranding, interpretas a Sam Brcodeges en una misión para unir a las personas aisladas en un mundo fragmentado. El juego combina elementos de acción y exploración con una narrativa profunda y visualmente impactante.",
+    "desc": "Embárcate en un viaje surrealista a través de un mundo devastado, entregando suministros y reconectando a la humanidad en un entorno postapocalíptico. En Death Stranding, interpretas a Sam Brcodeges en una misión para unir a las personas aisladas en un mundo fragmentado. El juego combina elementos de acción y exploración con una narrativa profunda y visualmente impactante.",
     "state": true,
     "stock": 10,
     "plataform": "ps4"
   },
   {
     "code": "RO90omga8D4",
-    "thumbnails": "/public/img/ps4/games/doom-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/doom-ps4.webp",
     "title": "DOOM",
     "genre": "Acción y disparos",
     "price": " 8000",
@@ -216,7 +218,7 @@
   },
   {
     "code": "ea_ULGbQTg0",
-    "thumbnails": "/public/img/ps4/games/prey-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/prey-ps4.webp",
     "title": "Prey",
     "genre": "Acción y suspense",
     "price": " 8000",
@@ -227,7 +229,7 @@
   },
   {
     "code": "OT8if6DXOFQ",
-    "thumbnails": "/public/img/ps4/games/elden-ring.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/elden-ring.webp",
     "title": "Elden Ring",
     "genre": "Acción de mundo abierto",
     "price": " 8000",
@@ -238,7 +240,7 @@
   },
   {
     "code": "kTSh7aHfb5Q",
-    "thumbnails": "/public/img/ps4/games/call-of-duty-black-ops-cold-war-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/call-of-duty-black-ops-cold-war-ps4.webp",
     "title": "Call of Duty: Black Ops Cold War",
     "genre": "Shooter de acción",
     "price": " 8000",
@@ -249,7 +251,7 @@
   },
   {
     "code": "VVX7DRyjE60",
-    "thumbnails": "/public/img/ps4/games/assassins-creed-valhalla-ps4.webp",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/assassins-creed-valhalla-ps4.webp",
     "title": "Assassin's Creed Valhalla",
     "genre": "Acción y aventura",
     "price": " 8000",
@@ -261,7 +263,7 @@
 
   {
     "code": "ruY1eT9bXiw",
-    "thumbnails": "/public/xone/games/quantum-break-xone.webp",
+    "thumbnails": "/BACKEND/src/public/xone/games/quantum-break-xone.webp",
     "title": "Quantum Break",
     "genre": "Acción y aventura",
     "price": " 8000",
@@ -272,7 +274,7 @@
   },
   {
     "code": "Asy_p4xStbk",
-    "thumbnails": "/public/img/xone/games/assassins-creed-odyssey-xone.jpg",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/assassins-creed-odyssey-xone.jpg",
     "title": "Assassin's Creed Odyssey",
     "genre": "Mundo abierto, acción",
     "price": " 8000",
@@ -283,7 +285,7 @@
   },
   {
     "code": "jt8Nx2Hm7Y4",
-    "thumbnails": "/public/img/xone/games/battlefield-1-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/battlefield-1-xone.webp",
     "title": "Battlefield 1",
     "genre": "Shooter en primera persona",
     "price": " 8000",
@@ -294,7 +296,7 @@
   },
   {
     "code": "qAUYNcodeEJ6o",
-    "thumbnails": "/public/img/xone/games/call-of-duty-black-ops-iii-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/call-of-duty-black-ops-iii-xone.webp",
     "title": "Call of Duty: Black Ops III",
     "genre": "Shooter en primera persona",
     "price": " 8000",
@@ -305,7 +307,7 @@
   },
   {
     "code": "QkkoHAzjnUs",
-    "thumbnails": "/public/img/xone/games/grand-theft-auto-v-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/grand-theft-auto-v-xone.webp",
     "title": "Grand Theft Auto V",
     "genre": "Mundo abierto, acción",
     "price": " 8000",
@@ -316,7 +318,7 @@
   },
   {
     "code": "K_q398Qx6I",
-    "thumbnails": "/public/img/xone/games/the-witcher-3-wild-hunt-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/the-witcher-3-wild-hunt-xone.webp",
     "title": "The Witcher 3: Wild Hunt",
     "genre": "RPG de mundo abierto",
     "price": " 8000",
@@ -327,7 +329,7 @@
   },
   {
     "code": "YLcjfALaQh0",
-    "thumbnails": "/public/img/xone/games/forza-motorsport-5-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/forza-motorsport-5-xone.webp",
     "title": "Forza Motorsport 5",
     "genre": "Carreras, automovilismo",
     "price": " 8000",
@@ -338,7 +340,7 @@
   },
   {
     "code": "cWBwFhUv1-8",
-    "thumbnails": "/public/img/xone/games/dark-souls-iii-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/dark-souls-iii-xone.webp",
     "title": "Dark Souls III",
     "genre": "Acción y rol",
     "price": " 8000",
@@ -349,7 +351,7 @@
   },
   {
     "code": "hr1G31fMVRI",
-    "thumbnails": "/public/img/xone/games/gears-of-war-ultimate-edition-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/gears-of-war-ultimate-edition-xone.webp",
     "title": "Gears of War Ultimate Edition",
     "genre": "Shooter en tercera persona, acción",
     "price": " 8000",
@@ -360,7 +362,7 @@
   },
   {
     "code": "wfOjRzWgVKo",
-    "thumbnails": "/public/img/xone/games/star-wars-battlefront-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/star-wars-battlefront-xone.webp",
     "title": "Star Wars: Battlefront",
     "genre": "Acción y disparos",
     "price": " 8000",
@@ -371,7 +373,7 @@
   },
   {
     "code": "H2qITQHud2I",
-    "thumbnails": "/public/img/xone/games/the-evil-within-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/the-evil-within-xone.webp",
     "title": "The Evil Within",
     "genre": "Survival horror",
     "price": " 8000",
@@ -382,7 +384,7 @@
   },
   {
     "code": "QNO9n9TthZg",
-    "thumbnails": "/public/img/xone/games/ryse-son-of-rome-xone.webp",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/ryse-son-of-rome-xone.webp",
     "title": "Ryse: Son of Rome",
     "genre": "Combate, acción, aventura",
     "price": " 8000",

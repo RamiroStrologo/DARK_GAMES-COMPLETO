@@ -54,6 +54,7 @@ const initializePassport = () => {
       },
       async (jwt_payload, done) => {
         try {
+          console.log(jwt_payload);
           return done(null, jwt_payload);
         } catch (err) {
           return done(err);
@@ -65,8 +66,10 @@ const initializePassport = () => {
 
 const cookieExtractor = function (req) {
   let token = null;
+
   if (req && req.cookies) {
     token = req.cookies['cookieToken'];
+    console.log('En passport', req.cookies['tokencookie']);
   }
   return token;
 };
