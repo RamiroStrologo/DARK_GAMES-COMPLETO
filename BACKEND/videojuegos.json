@@ -1,6 +1,6 @@
 [
   {
-    "code": "8a3Aga7JJgE",
+    "ytId": "8a3Aga7JJgE",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/the-last-of-us-ps3.webp",
     "title": "The Last of Us",
     "genre": "Acción y aventura",
@@ -11,7 +11,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "QkkoHAzjnUs",
+    "ytId": "QkkoHAzjnUs",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/gta-v-ps3.webp",
     "title": "GTA V",
     "genre": "Mundo abierto, acción",
@@ -22,7 +22,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "JSRtYpNRoN0",
+    "ytId": "JSRtYpNRoN0",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/the-elder-scrolls-v-skyrim-ps3.webp",
     "title": "The Elder Scrolls V: Skyrim",
     "genre": "RPG de mundo abierto",
@@ -33,7 +33,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "-D_KcctdR0M",
+    "ytId": "-D_KcctdR0M",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/battlefield-4-ps3.webp",
     "title": "Battlefield 4",
     "genre": "Shooter en primera persona",
@@ -44,7 +44,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "U6uyuIQYlfY",
+    "ytId": "U6uyuIQYlfY",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/dark-souls-ii.webp",
     "title": "Dark Souls II",
     "genre": "Acción y rol",
@@ -53,7 +53,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "ctQl9wa3ydE",
+    "ytId": "ctQl9wa3ydE",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/dead-space-ps3.webp",
     "title": "Dead Space",
     "genre": "Survival horror",
@@ -64,7 +64,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "EMCkbDnaTDM",
+    "ytId": "EMCkbDnaTDM",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/metal-gear-rising-revengeance-ps3.webp",
     "title": "Metal Gear Rising: Revengeance",
     "genre": "Acción y hack and slash",
@@ -73,7 +73,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "ajxQ4dUvrqk",
+    "ytId": "ajxQ4dUvrqk",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/god-of-war-ascension-ps3.webp",
     "title": "God of War: Ascension",
     "genre": "Acción y aventura",
@@ -84,18 +84,18 @@
     "plataform": "ps3"
   },
   {
-    "code": "czFv7F_3HUE",
+    "ytId": "czFv7F_3HUE",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/metal-gear-solid-4-guns-of-the-patriots-ps3.webp",
-    "title": "Metal Gear Solcode 4: Guns of the Patriots",
+    "title": "Metal Gear Solid 4: Guns of the Patriots",
     "genre": "Acción y sigilo",
     "price": " 3800",
-    "desc": "Vive la última misión de Solcode Snake en un mundo lleno de conspiraciones y giros sorprendentes en esta entrega de Metal Gear Solcode. La mezcla de acción y sigilo te mantendrá alerta en todo momento.",
+    "desc": "Vive la última misión de Solcode Snake en un mundo lleno de conspiraciones y giros sorprendentes en esta entrega de Metal Gear Solid. La mezcla de acción y sigilo te mantendrá alerta en todo momento.",
     "state": true,
     "stock": 10,
     "plataform": "ps3"
   },
   {
-    "code": "D6ouHWP0KrY",
+    "ytId": "D6ouHWP0KrY",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/need-for-speed-hot-pursuit-ps3.webp",
     "title": "Need for Speed: Hot Pursuit",
     "genre": "Carreras y mundo abierto",
@@ -106,7 +106,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "kJDYCVV",
+    "ytId": "kJDYCVV",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/far-cry-4-_1_.webp",
     "title": "Far Cry 4",
     "genre": "Mundo abierto, disparos",
@@ -117,7 +117,7 @@
     "plataform": "ps3"
   },
   {
-    "code": "93FHnpQ8uz0",
+    "ytId": "93FHnpQ8uz0",
     "thumbnails": "/BACKEND/src/public/img/ps3/games/silent-hill-downpour-_1_.webp",
     "title": "Silent Hill: Downpour",
     "genre": "Survival horror",
@@ -129,8 +129,8 @@
   },
 
   {
-    "code": "CCum266l1vY",
-    "thumbnails": "/BACKEND/src/public/imgps4/games/crash-bandicoot-4-its-about-time-ps4.webp",
+    "ytId": "CCum266l1vY",
+    "thumbnails": "/BACKEND/src/public/img/ps4/games/crash-bandicoot-4-its-about-time-ps4.webp",
     "title": "Crash Bandicoot 4: It's About Time",
     "genre": "Plataforma",
     "price": " 7000",
@@ -140,7 +140,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "jG2QDcqtLmE",
+    "ytId": "jG2QDcqtLmE",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/cyberpunk-2077-ps4.webp",
     "title": "Cyberpunk 2077",
     "genre": "RPG de acción",
@@ -151,7 +151,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "TmZ5MTIu5hU",
+    "ytId": "TmZ5MTIu5hU",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/bloodborne-ps4.webp",
     "title": "Bloodborne",
     "genre": "Acción de rol",
@@ -162,7 +162,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "S6GTl_vPRvU",
+    "ytId": "S6GTl_vPRvU",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/hogwarts-legacy-ps4.webp",
     "title": "Hogwarts Legacy",
     "genre": "RPG de mundo abierto",
@@ -173,18 +173,18 @@
     "plataform": "ps4"
   },
   {
-    "code": "HCL2NwiRsAg",
+    "ytId": "HCL2NwiRsAg",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/rescodeent-evil-village-ps4.webp",
-    "title": "Rescodeent Evil Village",
+    "title": "Resident Evil Village",
     "genre": "Survival horror",
     "price": " 8000",
-    "desc": "Sumérgete en un pueblo aterrorizante y enfrenta horrores inimaginables mientras buscas a tu hija secuestrada en esta última entrega de la saga Rescodeent Evil. Rescodeent Evil Village combina elementos de survival horror con una narrativa intrigante y una jugabilcodead emocionante. Explora el misterioso pueblo y enfréntate a criaturas grotescas en este título que continúa la historia de Ethan Winters.",
+    "desc": "Sumérgete en un pueblo aterrorizante y enfrenta horrores inimaginables mientras buscas a tu hija secuestrada en esta última entrega de la saga Resident Evil. Resident Evil Village combina elementos de survival horror con una narrativa intrigante y una jugabilcodead emocionante. Explora el misterioso pueblo y enfréntate a criaturas grotescas en este título que continúa la historia de Ethan Winters.",
     "state": true,
     "stock": 10,
     "plataform": "ps4"
   },
   {
-    "code": "fLGa3SBxfCk",
+    "ytId": "fLGa3SBxfCk",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/nioh-ps4.webp",
     "title": "Nioh",
     "genre": "Acción y rol",
@@ -195,7 +195,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "2nj9Ub32ILs",
+    "ytId": "2nj9Ub32ILs",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/death-stranding-ps4.webp",
     "title": "Death Stranding",
     "genre": "Acción y exploración",
@@ -206,7 +206,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "RO90omga8D4",
+    "ytId": "RO90omga8D4",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/doom-ps4.webp",
     "title": "DOOM",
     "genre": "Acción y disparos",
@@ -217,7 +217,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "ea_ULGbQTg0",
+    "ytId": "ea_ULGbQTg0",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/prey-ps4.webp",
     "title": "Prey",
     "genre": "Acción y suspense",
@@ -228,7 +228,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "OT8if6DXOFQ",
+    "ytId": "OT8if6DXOFQ",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/elden-ring.webp",
     "title": "Elden Ring",
     "genre": "Acción de mundo abierto",
@@ -239,7 +239,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "kTSh7aHfb5Q",
+    "ytId": "kTSh7aHfb5Q",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/call-of-duty-black-ops-cold-war-ps4.webp",
     "title": "Call of Duty: Black Ops Cold War",
     "genre": "Shooter de acción",
@@ -250,7 +250,7 @@
     "plataform": "ps4"
   },
   {
-    "code": "VVX7DRyjE60",
+    "ytId": "VVX7DRyjE60",
     "thumbnails": "/BACKEND/src/public/img/ps4/games/assassins-creed-valhalla-ps4.webp",
     "title": "Assassin's Creed Valhalla",
     "genre": "Acción y aventura",
@@ -262,8 +262,8 @@
   },
 
   {
-    "code": "ruY1eT9bXiw",
-    "thumbnails": "/BACKEND/src/public/xone/games/quantum-break-xone.webp",
+    "ytId": "ruY1eT9bXiw",
+    "thumbnails": "/BACKEND/src/public/img/xone/games/quantum-break-xone.webp",
     "title": "Quantum Break",
     "genre": "Acción y aventura",
     "price": " 8000",
@@ -273,7 +273,7 @@
     "plataform": "xone"
   },
   {
-    "code": "Asy_p4xStbk",
+    "ytId": "Asy_p4xStbk",
     "thumbnails": "/BACKEND/src/public/img/xone/games/assassins-creed-odyssey-xone.jpg",
     "title": "Assassin's Creed Odyssey",
     "genre": "Mundo abierto, acción",
@@ -284,7 +284,7 @@
     "plataform": "xone"
   },
   {
-    "code": "jt8Nx2Hm7Y4",
+    "ytId": "jt8Nx2Hm7Y4",
     "thumbnails": "/BACKEND/src/public/img/xone/games/battlefield-1-xone.webp",
     "title": "Battlefield 1",
     "genre": "Shooter en primera persona",
@@ -295,7 +295,7 @@
     "plataform": "xone"
   },
   {
-    "code": "qAUYNcodeEJ6o",
+    "ytId": "qAUYNcodeEJ6o",
     "thumbnails": "/BACKEND/src/public/img/xone/games/call-of-duty-black-ops-iii-xone.webp",
     "title": "Call of Duty: Black Ops III",
     "genre": "Shooter en primera persona",
@@ -306,7 +306,7 @@
     "plataform": "xone"
   },
   {
-    "code": "QkkoHAzjnUs",
+    "ytId": "QkkoHAzjnUs",
     "thumbnails": "/BACKEND/src/public/img/xone/games/grand-theft-auto-v-xone.webp",
     "title": "Grand Theft Auto V",
     "genre": "Mundo abierto, acción",
@@ -317,7 +317,7 @@
     "plataform": "xone"
   },
   {
-    "code": "K_q398Qx6I",
+    "ytId": "K_q398Qx6I",
     "thumbnails": "/BACKEND/src/public/img/xone/games/the-witcher-3-wild-hunt-xone.webp",
     "title": "The Witcher 3: Wild Hunt",
     "genre": "RPG de mundo abierto",
@@ -328,7 +328,7 @@
     "plataform": "xone"
   },
   {
-    "code": "YLcjfALaQh0",
+    "ytId": "YLcjfALaQh0",
     "thumbnails": "/BACKEND/src/public/img/xone/games/forza-motorsport-5-xone.webp",
     "title": "Forza Motorsport 5",
     "genre": "Carreras, automovilismo",
@@ -339,7 +339,7 @@
     "plataform": "xone"
   },
   {
-    "code": "cWBwFhUv1-8",
+    "ytId": "cWBwFhUv1-8",
     "thumbnails": "/BACKEND/src/public/img/xone/games/dark-souls-iii-xone.webp",
     "title": "Dark Souls III",
     "genre": "Acción y rol",
@@ -350,7 +350,7 @@
     "plataform": "xone"
   },
   {
-    "code": "hr1G31fMVRI",
+    "ytId": "hr1G31fMVRI",
     "thumbnails": "/BACKEND/src/public/img/xone/games/gears-of-war-ultimate-edition-xone.webp",
     "title": "Gears of War Ultimate Edition",
     "genre": "Shooter en tercera persona, acción",
@@ -361,7 +361,7 @@
     "plataform": "xone"
   },
   {
-    "code": "wfOjRzWgVKo",
+    "ytId": "wfOjRzWgVKo",
     "thumbnails": "/BACKEND/src/public/img/xone/games/star-wars-battlefront-xone.webp",
     "title": "Star Wars: Battlefront",
     "genre": "Acción y disparos",
@@ -372,7 +372,7 @@
     "plataform": "xone"
   },
   {
-    "code": "H2qITQHud2I",
+    "ytId": "H2qITQHud2I",
     "thumbnails": "/BACKEND/src/public/img/xone/games/the-evil-within-xone.webp",
     "title": "The Evil Within",
     "genre": "Survival horror",
@@ -383,7 +383,7 @@
     "plataform": "xone"
   },
   {
-    "code": "QNO9n9TthZg",
+    "ytId": "QNO9n9TthZg",
     "thumbnails": "/BACKEND/src/public/img/xone/games/ryse-son-of-rome-xone.webp",
     "title": "Ryse: Son of Rome",
     "genre": "Combate, acción, aventura",

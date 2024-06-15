@@ -1,8 +1,7 @@
-const { Router } = require('express');
+import { Router } from 'express';
+import { newCart, addProdToCart } from '../controllers/cart.controllers.js';
 const route = new Router();
 
-const { newCart } = require('../controllers/cart.controllers');
-
 route.post('/newCart', newCart);
-
-module.exports = route;
+route.post('/addProdToCart/:cId/:pId', addProdToCart);
+export default route;

@@ -1,10 +1,10 @@
-const { Router } = require('express');
-const route = new Router();
-const {
+import { Router } from 'express';
+import {
   addMany,
   delMany,
   getProducts,
-} = require('../controllers/product.controllers');
+} from '../controllers/product.controllers.js';
+const route = new Router();
 
 route.get('/', getProducts);
 //--* CARGA MASIVA DE PRODUCTOS, BORRAR *..\\
@@ -12,4 +12,4 @@ route.post('/addMany', addMany);
 route.post('/delMany', delMany);
 //--*                                     *..\\
 
-module.exports = route;
+export default route;

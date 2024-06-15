@@ -1,104 +1,35 @@
-function loadTienda() {
-  getGames();
+async function loadTienda() {
+  loadLoader();
+  const data = await getGames();
   cambiarPage(htmlTienda);
-  async function getGames(filters = null) {
-    const filtersToAdd = { ...filters };
-    const response = await fetch(
-      `http://localhost:8080/api/products?plataform=${filtersToAdd.plataform}`
-    );
-    if (!response.ok) {
-      return false;
-    }
-    const data = await response.json();
-    showGames(data);
-  }
-  function showGames(arrayGames) {
-    const gamesContainer = document.querySelector('#section_juegos_tienda');
-    //LIMPIO EL CONTENEDOR PADRE
-    gamesContainer.innerHTML = '';
-    //CREO EL SEPARADOR, ASIGNO CLASES, INICIALIZO ATRIBUTOS Y RELACIONO LOS ELEMENTOS(ADAPTAR)///////////////!!!!!!!!!!!
-    // const separator = document.createElement('div');
-    // const imgSep1 = document.createElement('img');
-    // const imgSep2 = document.createElement('img');
-    // const textSep = document.createElement('h2');
-    // separator.classList.add(
-    //   'mt-3',
-    //   'mb-2',
-    //   'h2_tienda',
-    //   'd-flex',
-    //   'justify-content-evenly'
-    // );
-    // separator.id = 'ps3_games';
-    // imgSep1.src = consolaInfo[0].imgSepSrc;
-    // imgSep1.alt = consolaInfo[0].altImgSep;
-    // imgSep2.src = consolaInfo[0].imgSepSrc;
-    // imgSep2.alt = consolaInfo[0].altImgSep;
-    // textSep.innerText = consolaInfo[0].txtSep;
-    // separator.appendChild(imgSep1);
-    // separator.appendChild(textSep);
-    // separator.appendChild(imgSep2);
-    // gamesContainer.appendChild(separator);
-    //RECORRE EL ARREGLO DE JUEGOS
-    const childGamesContainer = document.createElement('div');
-    for (const key in arrayGames.data.docs) {
-      //CREA LOS ELEMENTOS
-      const divGame = document.createElement('div');
-      const imgGame = document.createElement('img');
-      const parrafo = document.createElement('p');
-      // ASIGNA LAS CLASES E INICIALIZA ATRIBUTOS
-      childGamesContainer.classList.add(
-        'd-flex',
-        'flex-wrap',
-        'justify-content-start',
-        'contenedor_portadas_tienda'
-      );
-      divGame.classList.add(
-        'd-flex',
-        'flex-wrap',
-        'flex-column',
-        'mb-3',
-        'div_img_tienda'
-      );
-      const game = arrayGames.data.docs[key];
-      imgGame.classList.add('img_portadas');
-      imgGame.src = game.thumbnails;
-      imgGame.alt = game.title;
-      parrafo.innerHTML = `Género: ${game.genre} <br />
-      Precio: ${game.price} <br />`;
-      //EMPARENTA LOS ELEMENTOS
-      divGame.appendChild(imgGame);
-      divGame.appendChild(parrafo);
-      childGamesContainer.appendChild(divGame);
-      asignarEventClickDetalles(divGame, game);
-    }
-    gamesContainer.appendChild(childGamesContainer);
-  }
-  function asignarEventClickDetalles(divGame, game) {
-    const gameData = game;
-    divGame.addEventListener('click', function () {
-      loadDetails(gameData);
-    });
-  }
+
   const btnPS3 = document.querySelector('#btnPS3');
-  btnPS3.addEventListener('click', function () {
-    getGames({ plataform: 'ps3' });
+  btnPS3.addEventListener('click', async function () {
+    const data = await getGames({ plataform: 'ps3' });
+    showGames(data);
   });
 
   const btnPS4 = document.querySelector('#btnPS4');
-  btnPS4.addEventListener('click', function () {
-    getGames({ plataform: 'ps4' });
+  btnPS4.addEventListener('click', async function () {
+    const data = await getGames({ plataform: 'ps4' });
+    showGames(data);
   });
 
   const btnXONE = document.querySelector('#btnXONE');
-  btnXONE.addEventListener('click', function () {
-    getGames({ plataform: 'xone' });
+  btnXONE.addEventListener('click', async function () {
+    const data = await getGames({ plataform: 'xone' });
+    showGames(data);
   });
 
   const btnAll = document.querySelector('#button_tienda_hamburger');
-  btnAll.addEventListener('click', function () {
-    getGames();
+  btnAll.addEventListener('click', async function () {
+    const data = await getGames();
+    showGames(data);
   });
+
+  showGames(data);
 }
+
 async function loadDetails(game) {
   cambiarPage(htmlDetails);
   const imgCont = document.querySelector('#imgCont');
@@ -110,6 +41,7 @@ async function loadDetails(game) {
   const tituloH = document.createElement('h2');
   const videoCont = document.querySelector('#videoCont');
   const lnkVolver = document.querySelector('#backCont');
+  const divAddToCart = document.querySelector('#addCartCont');
   imgCont.appendChild(img);
   img.src = game.thumbnails;
   datCont.appendChild(parrafo);
@@ -135,7 +67,11 @@ async function loadDetails(game) {
   lnkVolver.addEventListener('click', () => {
     loadTienda();
   });
+  divAddToCart.addEventListener('click', () => {
+    addProdToCart();
+  });
 }
+
 function loadLogup() {
   cambiarPage(htmlLogup);
   const btnLogup = document.querySelector('#btnLogup');
@@ -162,7 +98,6 @@ function loadLogup() {
           password: txtPass,
         };
         const response = await logUp(data);
-        console.log(response);
         response && loadLogin();
       }
     }
@@ -190,6 +125,13 @@ function loadLogin() {
 }
 function loadAboutUs() {
   cambiarPage(htmlAboutUs);
+}
+function loadCart() {
+  cambiarPage(htmlCart);
+}
+
+function loadLoader() {
+  cambiarPage(htmlLoader);
 }
 
 const htmlTienda = `<div class="row">
@@ -249,9 +191,16 @@ const htmlDetails = `   <div class="row" id="pageDetailContainer">
   class="d-flex justify-content-evenly flex-wrap m-5"
   id="detailCont"
 >
+<div id="buttonCont"> 
 <div id="backCont" class="d-flex align-self-start">
  <img src="./assets/images/nav_icos/back_ico.svg" alt="Icono de volver" />
 </div>
+<div id="addCartCont" class="d-flex align-self-start"> <img
+src="./assets/images/nav_icos/cart-add-ico.svg"
+alt="Icono de agregar"/>
+</div>
+</div>
+
   <aside
     class="col-sm-12 col-md-4 d-flex flex-column flex-wrap justify-content-center pt-3 pe-3 ps-3"
     id="asideDetalles"
@@ -484,6 +433,41 @@ const htmlAboutUs = `<div class="row">
       class="img-fluid"
       id="img_about"
     />
+  </div>
+</div>
+</div>`;
+
+const htmlCart = `<div class="row">
+                    <div class="cartCont">
+                        <div class="cardItem storeView"> 
+                        <img />
+                        <p>
+                         TEXTO
+                        </p>
+                        </div>
+                       <div id="divSpan">
+                       <span>Titulo</span>
+                       <span>Cantidad:</span>
+                       <span>Precio</span>
+                       </div>
+                       <div class="cartSummary">
+                       <span>Total:</span>
+                       <button type="button"/>
+                       <button type="button"/>
+                       </div>
+                    </div>
+                   </div>`;
+const htmlLoader = ` <div class="loaderCont">
+<div class=loader>
+  <div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 </div>
 </div>`;

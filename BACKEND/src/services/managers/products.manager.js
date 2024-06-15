@@ -1,5 +1,5 @@
-const Products = require('../../models/product.model');
-const { createCode } = require('../../utils/crypts.utils');
+import Products from '../../models/product.model.js';
+import { createCode } from '../../utils/crypts.utils.js';
 
 class ProductManager {
   async getProducts(plataform) {
@@ -8,7 +8,7 @@ class ProductManager {
         plataform.plataform != 'undefined'
           ? { plataform: plataform.plataform }
           : {},
-        { limit: 36 }
+        { limit: 36, sort: { plataform: 1 } }
       );
       return response;
     } catch (err) {
@@ -42,16 +42,6 @@ class ProductManager {
       return false;
     }
   }
-
-  //   async delProduct(code) {
-  //     try {
-  //       const response = await Products.deleteOne({ code: code });
-  //       return response.deletedCount > 0 ? true : false;
-  //     } catch (err) {
-  //       console.error(err);
-  //       return false;
-  //     }
-  //   }
 }
 
-module.exports = ProductManager;
+export default ProductManager;

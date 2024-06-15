@@ -1,7 +1,6 @@
-const User = require('../../models/user.model');
-const { createHash, isValid } = require('../../utils/crypts.utils');
-const CartManager = require('../managers/carts.manager');
-// const envVars = require('../../config/enviromentVar.config');
+import User from '../../models/user.model.js';
+import { createHash, isValid } from '../../utils/crypts.utils.js';
+import CartManager from '../managers/carts.manager.js';
 const cm = new CartManager();
 
 class UserManager {
@@ -59,4 +58,4 @@ class UserManager {
   }
 }
 
-module.exports = UserManager;
+export default UserManager;

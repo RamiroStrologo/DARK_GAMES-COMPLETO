@@ -33,6 +33,10 @@ aAboutUs.forEach((el) => {
     loadAboutUs();
   });
 });
+const aCart = document.querySelector('#aCart');
+aCart.addEventListener('click', function () {
+  loadCart();
+});
 
 //VERIFICA LA EXISTENCIA DE UN JWT
 function authPages(pageToLoad) {

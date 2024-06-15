@@ -1,4 +1,3 @@
-const corsOptions = {
+export const corsOptions = {
   origin: '*',
 };
-module.exports = { corsOptions };

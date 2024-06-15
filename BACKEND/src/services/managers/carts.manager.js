@@ -1,4 +1,4 @@
-const Cart = require('../../models/cart.model');
+import Cart from '../../models/cart.model.js';
 
 class CartManager {
   async addCart() {
@@ -10,6 +10,17 @@ class CartManager {
       return null;
     }
   }
+  async addProdToCart(cId, pId) {
+    try {
+      const cart = await Cart.findOne({ _id: cId });
+      cart.products.push({ product: pId });
+      await this.cart.save();
+      return true;
+    } catch (err) {
+      console.error(err);
+      return false;
+    }
+  }
 }
 
-module.exports = CartManager;
+export default CartManager;

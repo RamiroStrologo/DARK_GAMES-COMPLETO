@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-const envVars = require('../../config/enviromentVar.config');
+import mongoose from 'mongoose';
+import env from '../../config/enviroment.config.js';
 
-module.exports = {
+const configDB = {
   connect: () => {
     return mongoose
-      .connect(envVars.string_con)
+      .connect(env.string_con)
       .then(() => {
         console.log('bd connected');
       })
@@ -13,3 +13,5 @@ module.exports = {
       });
   },
 };
+
+export default configDB;

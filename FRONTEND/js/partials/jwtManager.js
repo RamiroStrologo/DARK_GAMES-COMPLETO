@@ -4,7 +4,6 @@ function checkJwtExist() {
 }
 
 async function authJwt(jwt) {
-  console.log(jwt);
   const response = await fetch('http://localhost:8080/api/auth/token', {
     headers: {
       Authorization: `Bearer ${jwt}`,

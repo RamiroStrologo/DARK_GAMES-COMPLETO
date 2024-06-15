@@ -1,7 +1,7 @@
-const ProductManager = require('../services/managers/products.manager');
+import ProductManager from '../services/managers/products.manager.js';
 const pm = new ProductManager();
 
-const getProducts = async (req, res) => {
+export const getProducts = async (req, res) => {
   try {
     const plataform = req.query;
     const response = await pm.getProducts(plataform);
@@ -21,16 +21,14 @@ const getProducts = async (req, res) => {
 };
 
 //--* CARGA MASIVA DE PRODUCTOS, BORRAR *..\\
-const addMany = async (req, res) => {
+export const addMany = async (req, res) => {
   const ok = await pm.addMany(req.body);
   if (ok) res.send({ msg: 'ok' });
   else res.send({ msg: 'no ok' });
 };
-const delMany = async (req, res) => {
+export const delMany = async (req, res) => {
   const ok = await pm.delMany();
   if (ok) res.send({ msg: 'ok' });
   else res.send({ msg: 'no ok' });
 };
 //--*                                     *..\\
-
-module.exports = { addMany, delMany, getProducts };

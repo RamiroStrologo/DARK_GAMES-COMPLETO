@@ -1,12 +1,12 @@
-const passport = require('passport');
-const JwtStrategy = require('passport-jwt').Strategy;
-const ExtractJwt = require('passport-jwt').ExtractJwt;
-const LocalStrategy = require('passport-local').Strategy;
-const envVars = require('../config/enviromentVar.config');
-const userManager = require('../services/managers/users.manager');
-const um = new userManager();
+import passport from 'passport';
+import { Strategy as JwtStrategy, ExtractJwt } from 'passport-jwt';
+import { Strategy as LocalStrategy } from 'passport-local';
+import config from './enviroment.config.js';
+import UserManager from '../services/managers/users.manager.js';
 
-const initializePassport = () => {
+const um = new UserManager();
+
+export const initializePassport = () => {
   //REGISTRO DE USUARIO
   passport.use(
     'register',
@@ -50,7 +50,7 @@ const initializePassport = () => {
     new JwtStrategy(
       {
         jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
-        secretOrKey: envVars.secret_key,
+        secretOrKey: config.secret_key,
       },
       async (jwt_payload, done) => {
         try {
@@ -73,4 +73,3 @@ const cookieExtractor = function (req) {
   }
   return token;
 };
-module.exports = { initializePassport };
